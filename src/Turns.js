@@ -25,7 +25,13 @@ class Turn {
   }
 
   giveFeedback() {
-    
+    switch (this.isCorrect) {
+      case true:
+        return 'correct!'
+        break;
+      default:
+        return 'incorrect!'
+    }
   }
 }
 
