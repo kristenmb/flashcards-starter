@@ -38,4 +38,14 @@ describe('Turn', function() {
     const turn = new Turn('typed answer', card);
     expect(turn.returnCard()).to.equal(card);
   });
+
+  it('should check to see if the users guess is correct', function () {
+    const card = new Card(1, 'heres a question', ['answer1', 'answer2', 'typed answer'], 'typed answer');
+    const turn = new Turn('typed answer', card);
+
+    const card2 = new Card(2, 'another question', [3, 5, 7, 8], 3);
+    const turn2 = new Turn(4, card2);
+    expect(turn.evaluateGuess()).to.equal(true);
+    expect(turn2.evaluateGuess()).to.equal(false);
+  });
 });
