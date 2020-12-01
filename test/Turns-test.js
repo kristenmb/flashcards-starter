@@ -32,4 +32,10 @@ describe('Turn', function() {
     const turn = new Turn('typed answer', card);
     expect(turn.returnGuess()).to.equal('typed answer');
   });
+
+  it('should return the current card', function () {
+    const card = new Card();
+    const turn = new Turn('typed answer', card);
+    expect(turn.returnCard()).to.equal(card);
+  });
 });

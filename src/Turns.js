@@ -8,6 +8,11 @@ class Turn {
     return this.userGuess;
   }
 
+  returnCard() {
+    return this.currentCard;
+  }
+
+
 }
 
 module.exports = Turn;
