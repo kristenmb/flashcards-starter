@@ -1,7 +1,8 @@
-class Turns {
-  constructor() {
-
+class Turn {
+  constructor(userGuess, currentCard) {
+    this.userGuess = userGuess;
+    this.currentCard = currentCard;
   }
 }
 
-module.exports = Turns;
+module.exports = Turn;

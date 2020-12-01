@@ -15,4 +15,15 @@ describe('Turn', function() {
     const turn = new Turn();
     expect(turn).to.be.an.instanceof(Turn);
   });
+
+  it('should take in a users guess', function() {
+    const turn = new Turn('typed answer');
+    expect(turn.userGuess).to.equal('typed answer');
+  });
+
+  it('should also take in the current card', function() {
+    const card = new Card();
+    const turn = new Turn('typed answer', card);
+    expect(turn.currentCard).to.equal(card);
+  });
 });
