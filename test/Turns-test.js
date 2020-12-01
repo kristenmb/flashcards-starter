@@ -26,4 +26,10 @@ describe('Turn', function() {
     const turn = new Turn('typed answer', card);
     expect(turn.currentCard).to.equal(card);
   });
+
+  it('should return the guess', function () {
+    const card = new Card();
+    const turn = new Turn('typed answer', card);
+    expect(turn.returnGuess()).to.equal('typed answer');
+  });
 });
