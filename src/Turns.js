@@ -15,22 +15,20 @@ class Turn {
 
   evaluateGuess() {
     switch (this.userGuess) {
-      case this.currentCard.correctAnswer:
+    case this.currentCard.correctAnswer:
       this.isCorrect = true;
       return true;
-      break;
-      default:
+    default:
       return false;
     }
   }
 
   giveFeedback() {
     switch (this.isCorrect) {
-      case true:
-        return 'correct!'
-        break;
-      default:
-        return 'incorrect!'
+    case true:
+      return 'correct!'
+    default:
+      return 'incorrect!'
     }
   }
 }
