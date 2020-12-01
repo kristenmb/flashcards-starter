@@ -27,7 +27,9 @@ class Round {
     return Math.floor(percent);
   }
 
-
+  endRound() {
+    return `*Round over!* You answered ${this.calculatePercentage()}% of the questions correctly!`
+  }
 };
 
 module.exports = Round;

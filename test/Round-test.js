@@ -60,7 +60,12 @@ describe('Round', () => {
   });
 
   it('should announce the end of the round', () => {
-
+    round.takeTurn('tuna');
+    round.takeTurn('yowling');
+    round.takeTurn('upside down');
+    round.calculatePercentage();
+    round.endRound();
+    expect(round.endRound()).to.equal('*Round over!* You answered 66% of the questions correctly!');
   });
 
 });
