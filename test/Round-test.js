@@ -51,10 +51,15 @@ describe('Round', () => {
   });
 
   it('should calculate the percentage of correct guesses', () => {
-  
+    round.takeTurn('tuna');
+    round.takeTurn('yowling');
+    round.takeTurn('upside down');
+
+    round.calculatePercentage();
+    expect(round.calculatePercentage()).to.equal(66)
   });
 
-  it.skip('should end the round when all cards have been answered', () => {
+  it('should announce the end of the round', () => {
 
   });
 

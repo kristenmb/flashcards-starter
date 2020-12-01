@@ -21,11 +21,18 @@ class Round {
     return turn.giveFeedback();
   }
 
+  calculatePercentage() {
+    const correctGuesses = this.deck.cards.length - this.incorrectGuesses.length;
+    const percent = (correctGuesses/this.deck.cards.length) * 100;
+    return Math.floor(percent);
+  }
+
+
 };
 
 module.exports = Round;
 
 //takeTurn - updates turns count, evalutes guesses, gives feedback and stores ids of incorrect guesses
 
-//calculate percetn correct calculate sand returns percentage of correct guesses
+
 //endround - prints collowing : round over! you answered <>% of the quesgtions correctly!
