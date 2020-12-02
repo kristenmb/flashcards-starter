@@ -33,16 +33,24 @@ describe('Round', () => {
   it('should update the turn count after each guess', () => {
     round.takeTurn('tuna');
     expect(round.turn).to.equal(1);
+    round.takeTurn('yowling');
+    expect(round.turn).to.equal(2);
   });
 
   it('should replace current card with the next card after a guess is submitted', () => {
     round.takeTurn('tuna');
     expect(round.returnCurrentCard()).to.deep.equal(card2);
+
+    round.takeTurn('scratching furniture');
+    expect(round.returnCurrentCard()).to.deep.equal(card3);
   });
 
   it('should evalute the guess and store incorrect guesses', () => {
     round.takeTurn('chicken');
     expect(round.incorrectGuesses.length).to.equal(1);
+    round.takeTurn('yowling');
+    round.takeTurn('curled up');
+    expect(round.incorrectGuesses.length).to.equal(3);
   });
 
   it('should give feedback about the guess', () => {
