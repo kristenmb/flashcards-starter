@@ -9,20 +9,10 @@ const Game = require('../src/Game');
 
 describe('Game', () => {
   let game;
-  let round;
-  let deck;
-  let card1;
-  let card2;
-  let card3;
 
   beforeEach(() => {
     game = new Game();
-    deck = new Deck([card1, card2, card3]);
-    round = new Round(deck);
-    card1 = new Card(1, 'What is Tater Tots favorite food?', ['chicken', 'tuna', 'carrots'], 'tuna');
-    card2 = new Card(2, 'What is Taters worst habit?', ['scratching furniture', 'yowling', 'hissing'], 'scratching furniture');
-    card3 = new Card(3, 'What is Tater Tots favorite way to sleep?', ['curled up', 'under the covers', 'upside down'], 'upside down');
-  })
+  });
 
   it('should be a function', () => {
     expect(Game).to.be.a('function');
@@ -30,5 +20,22 @@ describe('Game', () => {
 
   it('should instantiate an instance of Game', () => {
     expect(game).to.be.an.instanceof(Game);
+  });
+
+  it('should start with no current rounds', () => {
+    expect(game.currentRound).to.deep.equal({});
+  });
+
+  it('should keep track of the current round', () => {
+    game.start();
+    expect(game.currentRound).to.be.an.instanceof(Round);
+  });
+
+  it.skip('should be able to put cards in a deck', () => {
+
+  });
+
+  it.skip('should be able to create a new round using the deck', () => {
+
   });
 })
