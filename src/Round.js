@@ -18,6 +18,9 @@ class Round {
       this.incorrectGuesses.push(turn.currentCard.id);
     }
     this.turn++;
+    if (this.turn > this.deck.cards.length) {
+      this.endRound();
+    }
     return turn.giveFeedback();
   }
 
@@ -28,7 +31,7 @@ class Round {
   }
 
   endRound() {
-    return `*Round over!* You answered ${this.calculatePercentage()}% of the questions correctly!`
+    console.log(`*Round over!* You answered ${this.calculatePercentage()}% of the questions correctly!`)
   }
 }
 
