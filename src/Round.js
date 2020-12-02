@@ -18,7 +18,7 @@ class Round {
       this.incorrectGuesses.push(turn.currentCard.id);
     }
     this.turn++;
-    if(this.turn > this.deck.cards.length){
+    if (this.turn > this.deck.cards.length) {
       this.endRound();
     }
     return turn.giveFeedback();
