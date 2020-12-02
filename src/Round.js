@@ -33,8 +33,3 @@ class Round {
 }
 
 module.exports = Round;
-
-//takeTurn - updates turns count, evalutes guesses, gives feedback and stores ids of incorrect guesses
-
-
-//endround - prints collowing : round over! you answered <>% of the quesgtions correctly!
