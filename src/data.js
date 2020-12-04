@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const prototypeData = [{
   "id": 1,
   "question": "What allows you to define a set of related information using key-value pairs?",
@@ -151,5 +152,5 @@ const prototypeData = [{
 }]
 
 module.exports = {
-  prototypeData 
+  prototypeData
 }

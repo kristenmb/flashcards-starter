@@ -14,20 +14,18 @@ class Turn {
   }
 
   evaluateGuess() {
-    switch (this.userGuess) {
-    case this.currentCard.correctAnswer:
+    if (this.userGuess === this.currentCard.correctAnswer) {
       this.isCorrect = true;
       return true;
-    default:
+    } else {
       return false;
     }
   }
 
   giveFeedback() {
-    switch (this.isCorrect) {
-    case true:
+    if (this.isCorrect) {
       return 'correct!'
-    default:
+    } else {
       return 'incorrect!'
     }
   }

@@ -3,7 +3,6 @@ const expect = chai.expect;
 
 const Deck = require('../src/Deck');
 const Card = require('../src/Card');
-const Turn = require('../src/Turns');
 const Round = require('../src/Round');
 
 describe('Round', () => {
@@ -55,7 +54,7 @@ describe('Round', () => {
 
   it('should give feedback about the guess', () => {
     round.takeTurn('chicken');
-    expect(round.takeTurn('chicken')).to.equal('incorrect!')
+    expect(round.takeTurn('chicken')).to.equal('incorrect!');
   });
 
   it('should calculate the percentage of correct guesses', () => {

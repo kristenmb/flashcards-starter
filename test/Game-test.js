@@ -27,12 +27,4 @@ describe('Game', () => {
     game.start();
     expect(game.currentRound).to.be.an.instanceof(Round);
   });
-
-  it.skip('should be able to put cards in a deck', () => {
-
-  });
-
-  it.skip('should be able to create a new round using the deck', () => {
-
-  });
 })
